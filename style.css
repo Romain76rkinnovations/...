@@ -195,7 +195,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+            font-size: clamp(3rem, 6vw, 5rem);
             margin-bottom: 1.5rem;
             letter-spacing: -0.04em;
             line-height: 1.05;
@@ -217,35 +217,8 @@
             font-weight: 400;
         }
 
-        .hero-services {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-service-tag {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            padding: 0.6rem 1.25rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .hero-service-tag svg {
-            width: 16px;
-            height: 16px;
-            fill: var(--primary-orange);
-        }
-
         .hero-tagline {
-            margin-top: 3rem;
+            margin-top: 4rem;
             padding-top: 3rem;
             border-top: 1px solid var(--card-border);
             display: flex;
@@ -1175,11 +1148,6 @@
             .hero-tagline {
                 flex-direction: column;
                 gap: 1.5rem;
-            }
-
-            .hero-services {
-                flex-direction: column;
-                align-items: center;
             }
 
             .conclusion {
