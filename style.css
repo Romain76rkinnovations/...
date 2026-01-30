@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-        :root {
+:root {
             --primary-orange: #FF6B35;
             --deep-orange: #E85A24;
             --dark-bg: #08080A;
@@ -54,10 +54,6 @@
             display: flex;
             align-items: center;
             gap: 1.25rem;
-        }
-
-        .logo img {
-            height: 44px;
         }
 
         .logo-text {
@@ -118,7 +114,7 @@
             line-height: 1.9;
         }
 
-        /* Hero Section */
+        /* Hero Section - SLIDE 1 */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -199,7 +195,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 6vw, 5rem);
+            font-size: clamp(2.75rem, 5.5vw, 4.5rem);
             margin-bottom: 1.5rem;
             letter-spacing: -0.04em;
             line-height: 1.05;
@@ -221,8 +217,35 @@
             font-weight: 400;
         }
 
+        .hero-services {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-service-tag {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-service-tag svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--primary-orange);
+        }
+
         .hero-tagline {
-            margin-top: 4rem;
+            margin-top: 3rem;
             padding-top: 3rem;
             border-top: 1px solid var(--card-border);
             display: flex;
@@ -249,14 +272,14 @@
             font-weight: 600;
         }
 
-        /* About Section */
-        .about {
+        /* Context Section - SLIDE 2 */
+        .context {
             background: var(--darker-bg);
             border-top: 1px solid var(--card-border-subtle);
             border-bottom: 1px solid var(--card-border-subtle);
         }
 
-        .about-grid {
+        .context-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 6rem;
@@ -265,37 +288,41 @@
             margin: 0 auto;
         }
 
-        .about-content h2 {
+        .context-content h2 {
             font-size: clamp(2.25rem, 3.5vw, 3.25rem);
             margin-bottom: 2.5rem;
             letter-spacing: -0.03em;
         }
 
-        .about-content h2 span {
+        .context-content h2 span {
             color: var(--primary-orange);
         }
 
-        .about-text {
+        .context-text {
             color: var(--text-secondary);
             font-size: 1.15rem;
             margin-bottom: 1.75rem;
             line-height: 1.95;
         }
 
-        .about-points {
+        .context-challenges {
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
             margin-top: 2.5rem;
         }
 
-        .about-point {
+        .context-challenge {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1.25rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
         }
 
-        .about-point-icon {
+        .context-challenge-icon {
             width: 48px;
             height: 48px;
             background: rgba(255, 107, 53, 0.08);
@@ -306,23 +333,29 @@
             flex-shrink: 0;
         }
 
-        .about-point-icon svg {
+        .context-challenge-icon svg {
             width: 24px;
             height: 24px;
             fill: var(--primary-orange);
         }
 
-        .about-point span {
+        .context-challenge-content h4 {
             color: var(--text-primary);
-            font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
         }
 
-        .about-visual {
+        .context-challenge-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .context-visual {
             position: relative;
         }
 
-        .about-card {
+        .context-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 28px;
@@ -330,7 +363,7 @@
             position: relative;
         }
 
-        .about-card::before {
+        .context-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -341,8 +374,8 @@
             border-radius: 2px;
         }
 
-        .about-card-quote {
-            font-size: 1.45rem;
+        .context-card-quote {
+            font-size: 1.35rem;
             font-style: italic;
             color: var(--text-primary);
             line-height: 1.75;
@@ -350,101 +383,29 @@
             padding-left: 2.5rem;
         }
 
-        .about-card-quote::before {
-            content: '"';
+        .context-card-quote::before {
+            content: '⚠';
             position: absolute;
             left: 0;
-            top: -0.75rem;
-            font-family: 'Syne', sans-serif;
-            font-size: 5rem;
-            color: var(--primary-orange);
+            top: 0;
+            font-size: 1.5rem;
             line-height: 1;
-            opacity: 0.6;
         }
 
-        /* Mission Section */
-        .mission {
+        /* Response Section - SLIDE 3 */
+        .response {
             background: var(--dark-bg);
         }
 
-        .mission-grid {
+        .response-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .mission-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 24px;
-            padding: 2.5rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .mission-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--gradient-orange);
-            border-radius: 3px;
-        }
-
-        .mission-icon {
-            width: 72px;
-            height: 72px;
-            background: rgba(255, 107, 53, 0.08);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.75rem;
-        }
-
-        .mission-icon svg {
-            width: 36px;
-            height: 36px;
-            fill: var(--primary-orange);
-        }
-
-        .mission-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            letter-spacing: -0.01em;
-        }
-
-        .mission-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Positioning Section */
-        .positioning {
-            background: var(--darker-bg);
-            border-top: 1px solid var(--card-border-subtle);
-            border-bottom: 1px solid var(--card-border-subtle);
-        }
-
-        .positioning-content {
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .positioning-main {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .positioning-card {
+        .response-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 24px;
@@ -453,7 +414,7 @@
             overflow: hidden;
         }
 
-        .positioning-card::after {
+        .response-card::after {
             content: '';
             position: absolute;
             top: 0;
@@ -464,7 +425,7 @@
             pointer-events: none;
         }
 
-        .positioning-card-num {
+        .response-card-num {
             width: 48px;
             height: 48px;
             background: rgba(255, 107, 53, 0.1);
@@ -480,24 +441,26 @@
             margin-bottom: 1.5rem;
         }
 
-        .positioning-card h3 {
+        .response-card h3 {
             font-size: 1.35rem;
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
-        .positioning-card p {
+        .response-card p {
             color: var(--text-secondary);
             font-size: 1rem;
             line-height: 1.8;
         }
 
-        /* Expertises Section */
-        .expertises {
-            background: var(--dark-bg);
+        /* Objectives Section - SLIDE 4 */
+        .objectives {
+            background: var(--darker-bg);
+            border-top: 1px solid var(--card-border-subtle);
+            border-bottom: 1px solid var(--card-border-subtle);
         }
 
-        .expertises-grid {
+        .objectives-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
@@ -505,63 +468,63 @@
             margin: 0 auto;
         }
 
-        .expertise-card {
+        .objective-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 24px;
             padding: 2.5rem;
+            text-align: center;
             position: relative;
         }
 
-        .expertise-card::before {
+        .objective-card::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
             height: 3px;
             background: var(--gradient-orange);
-            border-radius: 24px 24px 0 0;
+            border-radius: 3px;
         }
 
-        .expertise-icon {
-            width: 64px;
-            height: 64px;
+        .objective-icon {
+            width: 72px;
+            height: 72px;
             background: rgba(255, 107, 53, 0.08);
-            border-radius: 18px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.75rem;
+            margin: 0 auto 1.75rem;
         }
 
-        .expertise-icon svg {
-            width: 32px;
-            height: 32px;
+        .objective-icon svg {
+            width: 36px;
+            height: 36px;
             fill: var(--primary-orange);
         }
 
-        .expertise-card h3 {
-            font-size: 1.25rem;
+        .objective-card h3 {
+            font-size: 1.2rem;
             margin-bottom: 1rem;
             color: var(--text-primary);
             letter-spacing: -0.01em;
         }
 
-        .expertise-card p {
+        .objective-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
-            line-height: 1.75;
+            line-height: 1.7;
         }
 
-        /* Approach Section */
-        .approach {
-            background: var(--darker-bg);
-            border-top: 1px solid var(--card-border-subtle);
-            border-bottom: 1px solid var(--card-border-subtle);
+        /* Methodology Section - SLIDE 5 */
+        .methodology {
+            background: var(--dark-bg);
         }
 
-        .approach-timeline {
+        .methodology-timeline {
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
@@ -569,7 +532,7 @@
             justify-content: space-between;
         }
 
-        .approach-timeline::before {
+        .methodology-timeline::before {
             content: '';
             position: absolute;
             top: 40px;
@@ -579,14 +542,14 @@
             background: linear-gradient(90deg, var(--primary-orange), rgba(255, 107, 53, 0.1));
         }
 
-        .approach-step {
+        .methodology-step {
             flex: 1;
             text-align: center;
             position: relative;
             padding: 0 1rem;
         }
 
-        .approach-step-num {
+        .methodology-step-num {
             width: 80px;
             height: 80px;
             background: var(--dark-bg);
@@ -605,24 +568,108 @@
             box-shadow: 0 0 40px rgba(255, 107, 53, 0.15);
         }
 
-        .approach-step h3 {
+        .methodology-step h3 {
             font-size: 1.15rem;
             margin-bottom: 0.75rem;
             color: var(--text-primary);
         }
 
-        .approach-step p {
+        .methodology-step p {
             color: var(--text-secondary);
             font-size: 0.9rem;
             line-height: 1.7;
         }
 
-        /* Clients Section */
-        .clients {
+        /* Deliverables Section - SLIDE 6 */
+        .deliverables {
+            background: var(--darker-bg);
+            border-top: 1px solid var(--card-border-subtle);
+            border-bottom: 1px solid var(--card-border-subtle);
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .deliverable-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .deliverable-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-orange);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .deliverable-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 107, 53, 0.08);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .deliverable-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--primary-orange);
+        }
+
+        .deliverable-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .deliverable-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .deliverable-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .deliverable-list li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .deliverable-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+        }
+
+        /* Target Section - SLIDE 7 */
+        .target {
             background: var(--dark-bg);
         }
 
-        .clients-grid {
+        .target-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
@@ -630,7 +677,7 @@
             margin: 0 auto;
         }
 
-        .client-card {
+        .target-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 20px;
@@ -638,7 +685,7 @@
             text-align: center;
         }
 
-        .client-icon {
+        .target-icon {
             width: 60px;
             height: 60px;
             background: rgba(255, 107, 53, 0.08);
@@ -649,25 +696,25 @@
             margin: 0 auto 1.5rem;
         }
 
-        .client-icon svg {
+        .target-icon svg {
             width: 30px;
             height: 30px;
             fill: var(--primary-orange);
         }
 
-        .client-card h3 {
+        .target-card h3 {
             font-size: 1.1rem;
             margin-bottom: 0.75rem;
             color: var(--text-primary);
         }
 
-        .client-card p {
+        .target-card p {
             color: var(--text-secondary);
             font-size: 0.9rem;
             line-height: 1.65;
         }
 
-        /* Value Section */
+        /* Value Section - SLIDE 8 */
         .value {
             background: var(--darker-bg);
             border-top: 1px solid var(--card-border-subtle);
@@ -745,6 +792,7 @@
             border-radius: 28px;
             padding: 3rem;
             text-align: center;
+            position: relative;
         }
 
         .value-highlight::before {
@@ -797,20 +845,23 @@
             font-size: 0.9rem;
         }
 
-        /* Why Section */
-        .why {
+        /* Mission Section - SLIDE 9 */
+        .mission {
             background: var(--dark-bg);
         }
 
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1400px;
+        .mission-content {
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .why-card {
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .mission-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 24px;
@@ -819,47 +870,68 @@
             position: relative;
         }
 
-        .why-card-num {
+        .mission-card::before {
+            content: '';
             position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 3rem;
-            color: rgba(255, 107, 53, 0.1);
-            line-height: 1;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-orange);
+            border-radius: 3px;
         }
 
-        .why-icon {
-            width: 64px;
-            height: 64px;
+        .mission-icon {
+            width: 72px;
+            height: 72px;
             background: rgba(255, 107, 53, 0.08);
-            border-radius: 18px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 1.75rem;
         }
 
-        .why-icon svg {
-            width: 32px;
-            height: 32px;
+        .mission-icon svg {
+            width: 36px;
+            height: 36px;
             fill: var(--primary-orange);
         }
 
-        .why-card h3 {
+        .mission-card h3 {
             font-size: 1.2rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             color: var(--text-primary);
+            letter-spacing: -0.01em;
         }
 
-        .why-card p {
+        .mission-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.7;
         }
 
-        /* Contact Section */
+        .mission-note {
+            margin-top: 3rem;
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .mission-note p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .mission-note strong {
+            color: var(--primary-orange);
+        }
+
+        /* Contact Section - SLIDE 10 */
         .contact {
             background: var(--darker-bg);
             border-top: 1px solid var(--card-border-subtle);
@@ -947,6 +1019,12 @@
             text-decoration: none;
             margin-top: 1rem;
             box-shadow: var(--glow-orange);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 100px rgba(255, 107, 53, 0.35);
         }
 
         .contact-cta svg {
@@ -1003,10 +1081,6 @@
             opacity: 0.4;
         }
 
-        .page-end-logo img {
-            height: 32px;
-        }
-
         .page-end-logo span {
             font-family: 'Syne', sans-serif;
             font-weight: 700;
@@ -1028,33 +1102,33 @@
                 padding: 7rem 3rem;
             }
 
-            .about-grid,
+            .context-grid,
             .value-grid {
                 grid-template-columns: 1fr;
                 gap: 4rem;
             }
 
-            .mission-grid,
-            .expertises-grid,
-            .why-grid {
+            .objectives-grid,
+            .deliverables-grid,
+            .target-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .positioning-main,
-            .clients-grid {
+            .response-grid,
+            .mission-cards {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .approach-timeline {
+            .methodology-timeline {
                 flex-wrap: wrap;
                 gap: 2rem;
             }
 
-            .approach-timeline::before {
+            .methodology-timeline::before {
                 display: none;
             }
 
-            .approach-step {
+            .methodology-step {
                 flex: 0 0 calc(33.333% - 1.5rem);
             }
 
@@ -1081,15 +1155,15 @@
                 margin-bottom: 4rem;
             }
 
-            .mission-grid,
-            .expertises-grid,
-            .positioning-main,
-            .clients-grid,
-            .why-grid {
+            .objectives-grid,
+            .deliverables-grid,
+            .response-grid,
+            .target-grid,
+            .mission-cards {
                 grid-template-columns: 1fr;
             }
 
-            .approach-step {
+            .methodology-step {
                 flex: 0 0 100%;
             }
 
@@ -1101,6 +1175,11 @@
             .hero-tagline {
                 flex-direction: column;
                 gap: 1.5rem;
+            }
+
+            .hero-services {
+                flex-direction: column;
+                align-items: center;
             }
 
             .conclusion {
